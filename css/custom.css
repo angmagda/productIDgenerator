@@ -1,0 +1,62 @@
+header {
+
+	background-image: url(../img/6_20mm.jpg);
+	background-position: center bottom;
+	
+}
+
+ div .jumbotron {
+	background-image: url("../img/binding_light.png");
+}
+
+.btn-lg {
+    padding: 10px 40px;
+    border-color: #fed136;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    background-color: #fed136;
+}
+
+.btn-lg:hover,
+.btn-lg:focus,
+.btn-lg:active,
+.btn-lg.active,
+.open .dropdown-toggle.btn-lg {
+    border-color: #f6bf01;
+    color: #fff;
+    background-color: #fec503;
+}
+
+.btn-lg:active,
+.btn-lg.active,
+.open .dropdown-toggle.btn-lg {
+    background-image: none;
+}
+
+.btn-lg.disabled,
+.btn-lg[disabled],
+fieldset[disabled] .btn-lg,
+.btn-lg.disabled:hover,
+.btn-lg[disabled]:hover,
+fieldset[disabled] .btn-lg:hover,
+.btn-lg.disabled:focus,
+.btn-lg[disabled]:focus,
+fieldset[disabled] .btn-lg:focus,
+.btn-lg.disabled:active,
+.btn-lg[disabled]:active,
+fieldset[disabled] .btn-lg:active,
+.btn-lg.disabled.active,
+.btn-lg[disabled].active,
+fieldset[disabled] .btn-lg.active {
+    border-color: #fed136;
+    background-color: #fed136;
+}
+
+.btn-lg .badge {
+    color: #fed136;
+    background-color: #fff;
+}

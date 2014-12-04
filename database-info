@@ -1,0 +1,225 @@
+CREATE DATABASE Ang;
+
+
+CREATE TABLE categories (
+    id bigserial primary key,
+    name varchar(20) NOT NULL,
+    date_added timestamp default NULL
+);
+
+CREATE TABLE products (
+	id bigserial primary key,
+	category_id 
+	name varchar(20) NOT NULL,
+	manufacturer_id(30),
+
+)
+
+// Create Tables
+
+CREATE TABLE categories
+(
+  name varchar(50) NOT NULL,
+  abbreviation character(2),
+  CONSTRAINT pk_category_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE categories
+  OWNER TO "Magda";
+
+
+
+CREATE TABLE manufacturers
+(
+  name varchar(20) NOT NULL,
+  abbreviation character(3),
+  id integer,
+  CONSTRAINT pk_manufacturer_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE manufacturers OWNER TO "Magda";
+
+
+
+CREATE TABLE materials
+(
+  name varchar(25) NOT NULL,
+  abbreviation character(2),
+  CONSTRAINT pk_material_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE materials OWNER TO "Magda";
+
+
+
+CREATE TABLE locations
+(
+  name varchar(20) NOT NULL,
+  abbreviation character(1),
+  CONSTRAINT pk_location_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE locations OWNER TO "Magda";
+
+
+
+CREATE TABLE lengths
+(
+  dimension varchar(25) NOT NULL,
+  abbreviation integer,
+  CONSTRAINT pk_length_dimension PRIMARY KEY (dimension)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE lengths OWNER TO "Magda";
+
+
+
+CREATE TABLE colors
+(
+  name varchar(25) NOT NULL,
+  abbreviation character(2),
+  CONSTRAINT pk_color_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE colors OWNER TO "Magda";
+
+
+
+CREATE TABLE finials
+(
+  name varchar(20) NOT NULL,
+  abbreviation character(3),
+  CONSTRAINT pk_finial_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE finials OWNER TO "Magda";
+
+
+
+CREATE TABLE diameters
+(
+  size varchar(20) NOT NULL,
+  abbreviation integer,
+  CONSTRAINT pk_diameter_size PRIMARY KEY (size)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE diameters OWNER TO "Magda";
+
+
+
+CREATE TABLE shapes
+(
+  name varchar(30) NOT NULL,
+  abbreviation character(1),
+  CONSTRAINT pk_shape_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE shapes OWNER TO "Magda";
+
+
+CREATE TABLE connection_types
+(
+  name varchar(30) NOT NULL,
+  abbreviation character(1),
+  CONSTRAINT pk_connection_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE connection_types OWNER TO "Magda";
+
+
+
+CREATE TABLE positions
+(
+  name varchar(20) NOT NULL,
+  abbreviation character(2),
+  CONSTRAINT pk_position_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE positions OWNER TO "Magda";
+
+
+
+CREATE TABLE rail_connections
+(
+  name varchar(20) NOT NULL,
+  abbreviation character(2),
+  CONSTRAINT pk_rail_connection_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE rail_connections OWNER TO "Magda";
+
+
+
+CREATE TABLE drape_connections
+(
+  name varchar(20) NOT NULL,
+  abbreviation character(1),
+  CONSTRAINT pk_drape_connection_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE drape_connections OWNER TO "Magda";
+
+
+
+CREATE TABLE stop_types
+(
+  name varchar(20) NOT NULL,
+  abbreviation character(3),
+  CONSTRAINT pk_stop_type_name PRIMARY KEY (name)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE stop_types OWNER TO "Magda";
+
+
+CREATE TABLE products
+(
+  category varchar(20),
+  productName varchar(30),
+  manufacturer varchar(20),
+  manufacturerId varchar(20),
+  dimensions varchar(20),
+  color varchar(20),
+  newProductId varchar(20),
+  CONSTRAINT pk_product_manufacturerId PRIMARY KEY (manufacturerId)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE products OWNER TO "Magda";
+
+
+//Add Data
+
+INSERT INTO manufacturers
+VALUES
+('Forest Group', 'FOR', 1),
+('Zabala', 'ZAB', 2),
+('Busche', 'BUS', 3);
